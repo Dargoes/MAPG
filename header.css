@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Audiowide", sans-serif;;
+    transition: all 0.5s;
+
+}
+.logo img{
+    height: 90px;
+    width: 90px;
+    margin-left: 2.5em;
+}
+body{
+    display: flex;
+    height: 400vh;
+    flex-direction: column;
+
+}
+.cabecalho{
+    display: flex;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+    margin-right: 2.5em;
+}
+.header_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.header_list a{
+    color: white;
+    text-decoration: none;
+}
+.header_list a:hover, .header_list:hover{
+    transform: scale(1.08);
+    text-decoration: underline;
+}
+
