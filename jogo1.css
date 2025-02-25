@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.cabecalho{
+    height: 10vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    margin-top: 10vh;
+}
+
+.barra_lateral{
+    position: fixed;
+    top: 10vh;
+    height: 90vh;
+    min-width: 150px;
+    background-image: url(imagens/ori_lateral.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(0.5);
+    box-shadow: inset -10px 0px 15px black;
+    z-index: 1;
+}
+
+.direita {
+    right: 0;
+    box-shadow: inset 10px 0px 15px black;
+}
+
+.main {
+    display: flex;
+    flex-grow: 1;
+    height: fit-content;
+    margin-inline: 150px;
+    background-color: gray;
+    flex-direction: column;
+}
+
+.secao1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.bloco {
+    padding: 20px;
+}
+
+.title {
+    font-size: 30px;
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.ori::before {
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url(imagens/ori_icone);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.texto {
+    margin-top: 10px;
+    margin-inline: 20px;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.galeria_imgs {
+    background-image: url(imagens/ori_slider1.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+    height: 200px;
+    width: 300px;
+    box-shadow: 0px 0px 10px 1px black;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+.seta_null {
+    font-size: 0;
+    border: none;
+    background-color: transparent;
+}
+
+.next_prev {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.galeria_imgs:hover .next_prev button{
+    background: transparent;
+    border: none;
+    font-size: 70px;
+    color: white;
+    text-decoration: none;
+}
+
+.galeria_imgs:hover .next_prev button:hover{
+    color: yellow;
+}
+
+.subtitle {
+    font-size: 25px;
+}
