@@ -11,21 +11,38 @@
     flex-direction: column;
     display: flex;
     height: 90vh;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     background-image: url(imagens/ori.jpg) ;
     background-size: cover;
     background-clip: content-box;
-    filter: grayscale(1);
+    filter: grayscale(.7);
 }
+.text_banner{
+    text-align: right;
+}
+
 .banner:hover{
     filter: grayscale(0);
 }
-.banner a{
-    font-size: 100px;
-    color: white;
+.banner a button{
+    position: relative;
+    top: 10em;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
     text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: white;
 }
+.banner a button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+
 .next_prev button{
     background: transparent;
     border: none;
@@ -59,11 +76,13 @@
 .sobre p {
     margin-inline: 100px;
     text-align: justify;
+    font-family: "Atkinson Hyperlegible Mono", serif;
 }
 .sobre button{
     border-radius: 120px;
     border: none;
     width: 150px;
+    font-family: "Atkinson Hyperlegible Mono", serif;
 }
 .sobre button:hover{
     background-color: black;
@@ -109,4 +128,49 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+
+.contatos{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.contatos h1{
+    text-align: center;
+    font-size: 100px;
+}
+.contatos p {
+    margin-inline: 100px;
+    text-align: justify;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.contatos button{
+    border-radius: 120px;
+    border: none;
+    width: 150px;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.contatos button:hover{
+    background-color: black;
+    color: yellow;
+    scale: 1.1;
+}
+.info_banner{
+    position: relative;
+    bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    text-align: right  ;
+}
+.info_banner h1{
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    
+}
+.info_banner h2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
 }
