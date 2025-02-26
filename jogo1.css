@@ -33,7 +33,7 @@ header {
     top: 10vh;
     height: 90vh;
     min-width: 150px;
-    background-image: url(imagens/ori_lateral.jpg);
+    background-image: url(imagens/ori1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -56,7 +56,7 @@ header {
     flex-direction: column;
 }
 
-.secao1 {
+.secao {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -78,7 +78,7 @@ header {
     display: inline-block;
     width: 30px;
     height: 30px;
-    background-image: url(imagens/ori_icone);
+    background-image: url(imagens/ori_logo.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -94,21 +94,20 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: fit-content;
+    height: fit-content;
     padding: 10px;
     margin-top: 50px;
     margin-right: 50px;
 }
 
 .galeria_imgs {
-    background-image: url(imagens/ori_slider1.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: black;
-    height: 200px;
-    width: 300px;
+    min-height: 150px;
+    min-width: 200px;
     box-shadow: 0px 0px 10px 1px black;
     display: flex;
     align-items: center;
@@ -117,30 +116,41 @@ header {
     border-radius: 10px;
 }
 
-.seta_null {
-    font-size: 0;
-    border: none;
-    background-color: transparent;
+.galeria1 {
+    background-image: url(imagens/ori2.jpg);
+    height: 200px;
+    width: 250px;
 }
 
-.next_prev {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.galeria2 {
+    background-image: url(imagens/ori3.jpg);
 }
 
-.galeria_imgs:hover .next_prev button{
-    background: transparent;
-    border: none;
-    font-size: 70px;
-    color: white;
-    text-decoration: none;
+.galeria3 {
+    background-image: url(imagens/ori4.jpg);
 }
 
-.galeria_imgs:hover .next_prev button:hover{
-    color: yellow;
+.galeria4 {
+    background-image: url(imagens/ori5.jpg);
+}
+
+.galeria5 {
+    background-image: url(imagens/ori6.jpg);
+    height: 200px;
+    width: 250px;
+}
+
+.galeria6 {
+    background-image: url(imagens/ori7.jpg);
+}
+
+.galeria7 {
+    background-image: url(imagens/ori8.jpg);
+    height: 200px;
+    width: 250px;
 }
 
 .subtitle {
-    font-size: 25px;
+    font-size: 20px;
+    padding-block: 5px;
 }
