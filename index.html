@@ -26,27 +26,42 @@
     </header>
 
     <div class="content">
-
         <div class="banner">
-            <div class="next_prev">
-                <button id="prev"><</button>
-                <button id="next">></button>
-            </div>
-            <div class="info_banner">
-                <div class="text_banner">
-                    <h1>Ori and The Will of The Wisps</h1>
-                    <h2>Moon Studios</h2>
+            
+            <div class="carousel" id="carousel">
+                <div class="info_banner" id="ori">
+                    <div class="text_banner">
+                        <h1>Ori and The Will of The Wisps</h1>
+                        <h2>Moon Studios</h2>
+                    </div>
+                    <a href="Games/jogo1.html" id="ori_button"><button>SOBRE</button></a>
                 </div>
-                <a href="Games/jogo1.html"><button>SOBRE</button></a>
+                <div class="info_banner" id="brawl">
+                    <div class="text_banner">
+                        <h1>Brawl</h1>
+                        <h2>Moon Studios</h2>
+                    </div>
+                    <a href="Games/jogo1.html"><button>SOBRE</button></a>
+                </div>
+                <div class="info_banner" id="fear">
+                    <div class="text_banner">
+                        <h1>fear</h1>
+                        <h2>Moon Studios</h2>
+                    </div>
+                    <a href="Games/jogo1.html"><button>SOBRE</button></a>
+                </div>
+            </div>
+            <div class="next_prev">
+                <button id="prev" onclick="moveSlide(-1)"><</button>
+                <button id="next" onclick="moveSlide(1)">></button>
             </div>
         </div>
-        <div class="sobre">
-            <h1>MAPG</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab voluptates voluptate magni perspiciatis tempora, eos quam nobis delectus asperiores et repellendus. Laboriosam quis tenetur corporis voluptatibus, illum ullam reiciendis.
-            Necessitatibus perferendis tenetur fugiat expedita delectus, impedit quidem? Dignissimos saepe aliquid, est fugiat culpa accusantium dolorum eveniet unde praesentium delectus necessitatibus odio ipsam facilis explicabo, eos vitae assumenda doloribus consequatur!
-            At, eos? Nisi perspiciatis fuga error ut dicta maiores autem maxime, repellat adipisci dolorum consequatur dolorem, quae hic. Laudantium minus harum, ipsum obcaecati asperiores aliquam hic similique ullam nulla numquam!
-            Doloremque facere, exercitationem harum necessitatibus consequatur consectetur ab delectus laudantium tempore corporis laborum voluptatibus ducimus molestias dignissimos aut, voluptate cupiditate? Nostrum hic id repellendus deleniti qui eum at. Esse, voluptas.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatibus iusto cum, id quae eum, eligendi dolores perspiciatis doloremque dicta itaque ipsa provident! Nisi, cum expedita deleniti aliquam quod in.</p>
-            <a href=""><button>SAIBA MAIS</button></a>
+        <div class="text_area">
+            <div class="sobre">
+                <h1>MAPG</h1>
+                <p>O MAPG é um blog focado em trazer conteúdos detalhados sobre jogos como Fear and Hunger, Ori e Brawl Stars. Nele, os leitores encontram uma variedade de informações, incluindo análises, guias estratégicos e curiosidades sobre esses títulos.Para os fãs de Fear and Hunger, o blog explora a atmosfera sombria, os desafios e as mecânicas únicas do jogo. Já para os admiradores de Ori, há conteúdos sobre a emocionante narrativa, os cenários deslumbrantes e as mecânicas de plataforma. No caso de Brawl Stars, o site acompanha atualizações, dicas de jogabilidade e estratégias para os diferentes modos e personagens.</p>
+                <a href=""><button>SAIBA MAIS</button></a>
+            </div>
         </div>
         <div class="jogos">
             <h1>Jogos</h1>
@@ -56,15 +71,26 @@
                 <div id="card3"></div>
             </div>
         </div>
-        <div class="contatos">
-            <h1>Contato</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab voluptates voluptate magni perspiciatis tempora, eos quam nobis delectus asperiores et repellendus. Laboriosam quis tenetur corporis voluptatibus, illum ullam reiciendis.
-            Necessitatibus perferendis tenetur fugiat expedita delectus, impedit quidem? Dignissimos saepe aliquid, est fugiat culpa accusantium dolorum eveniet unde praesentium delectus necessitatibus odio ipsam facilis explicabo, eos vitae assumenda doloribus consequatur!
-            At, eos? Nisi perspiciatis fuga error ut dicta maiores autem maxime, repellat adipisci dolorum consequatur dolorem, quae hic. Laudantium minus harum, ipsum obcaecati asperiores aliquam hic similique ullam nulla numquam!
-            Doloremque facere, exercitationem harum necessitatibus consequatur consectetur ab delectus laudantium tempore corporis laborum voluptatibus ducimus molestias dignissimos aut, voluptate cupiditate? Nostrum hic id repellendus deleniti qui eum at. Esse, voluptas.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatibus iusto cum, id quae eum, eligendi dolores perspiciatis doloremque dicta itaque ipsa provident! Nisi, cum expedita deleniti aliquam quod in.</p>
-            <a href=""><button>SAIBA MAIS</button></a>
+        <div class="text_area">
+            <div class="contatos">
+                <h1>Contato</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia ab voluptates voluptate magni perspiciatis tempora, eos quam nobis delectus asperiores et repellendus. Laboriosam quis tenetur corporis voluptatibus, illum ullam reiciendis.
+                Necessitatibus perferendis tenetur fugiat expedita delectus, impedit quidem? Dignissimos saepe aliquid, est fugiat culpa accusantium dolorum eveniet unde praesentium delectus necessitatibus odio ipsam facilis explicabo, eos vitae assumenda doloribus consequatur!
+                At, eos? Nisi perspiciatis fuga error ut dicta maiores autem maxime, repellat adipisci dolorum consequatur dolorem, quae hic. Laudantium minus harum, ipsum obcaecati asperiores aliquam hic similique ullam nulla numquam!
+                Doloremque facere, exercitationem harum necessitatibus consequatur consectetur ab delectus laudantium tempore corporis laborum voluptatibus ducimus molestias dignissimos aut, voluptate cupiditate? Nostrum hic id repellendus deleniti qui eum at. Esse, voluptas.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum voluptatibus iusto cum, id quae eum, eligendi dolores perspiciatis doloremque dicta itaque ipsa provident! Nisi, cum expedita deleniti aliquam quod in.</p>
+                <a href=""><button>SAIBA MAIS</button></a>
+            </div>
         </div>
     </div>
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const carousel = document.getElementById('carousel');
+            const items = document.querySelectorAll('.info_banner');
+            index = (index + step + items.length) % items.length;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
 
 </body>
 </html>
