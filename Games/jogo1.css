@@ -10,16 +10,13 @@ body {
     flex-direction: column;
 }
 
-header {
+.cabecalho{
+    height: 10vh;
+    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-}
-
-.cabecalho{
-    height: 10vh;
-    width: 100%;
 }
 
 .container {
@@ -28,12 +25,12 @@ header {
     margin-top: 10vh;
 }
 
-.barra_lateral{
+.barra_lateral {
     position: fixed;
     top: 10vh;
     height: 90vh;
     min-width: 150px;
-    background-image: url(imagens/ori1.jpg);
+    background-image: url(../imagens/ori1.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -54,6 +51,40 @@ header {
     margin-inline: 150px;
     background-color: gray;
     flex-direction: column;
+}
+
+@media screen and (max-width: 750px) {
+    .barra_lateral {
+        display: none;
+    }
+
+    .main {
+        margin-inline: 0px;
+    }
+
+    .cabecalho {
+        height: fit-content;
+        width: 100%;
+        position: sticky;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+    
+    .header_list {
+        padding: 5px;
+    }
+
+    ul {
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+    }
 }
 
 .secao {
@@ -77,9 +108,9 @@ header {
 .ori::before {
     content: "";
     display: inline-block;
-    width: 30px;
-    height: 30px;
-    background-image: url(imagens/ori_logo.jpg);
+    min-width: 30px;
+    min-height: 30px;
+    background-image: url(../imagens/ori_logo.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -95,11 +126,13 @@ header {
 
 .galeria {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
+    flex-flow: row wrap;
     align-items: center;
     width: fit-content;
     height: fit-content;
     padding: 10px;
+    justify-content: center;
 }
 
 .galeria_imgs {
@@ -125,35 +158,35 @@ header {
 }
 
 .galeria1 {
-    background-image: url(imagens/ori2.jpg);
+    background-image: url(../imagens/ori2.jpg);
     height: 200px;
     width: 250px;
 }
 
 .galeria2 {
-    background-image: url(imagens/ori3.jpg);
+    background-image: url(../imagens/ori3.jpg);
 }
 
 .galeria3 {
-    background-image: url(imagens/ori4.jpg);
+    background-image: url(../imagens/ori4.jpg);
 }
 
 .galeria4 {
-    background-image: url(imagens/ori5.jpg);
+    background-image: url(../imagens/ori5.jpg);
 }
 
 .galeria5 {
-    background-image: url(imagens/ori6.jpg);
+    background-image: url(../imagens/ori6.jpg);
     height: 200px;
     width: 250px;
 }
 
 .galeria6 {
-    background-image: url(imagens/ori7.jpg);
+    background-image: url(../imagens/ori7.jpg);
 }
 
 .galeria7 {
-    background-image: url(imagens/ori8.jpg);
+    background-image: url(../imagens/ori8.jpg);
     height: 200px;
     width: 250px;
 }
