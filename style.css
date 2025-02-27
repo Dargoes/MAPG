@@ -7,15 +7,27 @@
     gap: 10vh;
 }
 
+
+.carousel{
+   display: flex;
+   transition: all 0.5 ease-in-out; 
+}
 .banner{
-    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     height: 90vh;
-    justify-content:center;
-    align-items: center;
-    background-image: url(imagens/ori.jpg) ;
+    filter: grayscale(.7);
+}
+#ori_button{
+    z-index: 99;
+    position: relative;
+    bottom: 150px;
+}
+#ori{
+    background-image: url(imagens/ori.jpg);
     background-size: cover;
     background-clip: content-box;
-    filter: grayscale(.7);
 }
 .text_banner{
     text-align: center;
@@ -41,8 +53,14 @@
     background-color: white;
     color: black;
 }
+.text_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .next_prev button{
+    
     background: transparent;
     border: none;
     font-size: 100px;
@@ -51,9 +69,11 @@
 }
 #next{
     position:absolute;
+    top: 40vh;
     right: 0;
 }
 #prev{
+    top: 40vh;
     position:absolute;
     left: 0px;
 }
@@ -64,9 +84,10 @@
     gap: 50px;
     flex-direction: column;
     display: flex;
-    height: auto;
     justify-content: center;
     align-items: center;
+    background-color: blue;
+    width: 1000px;
 }
 .sobre h1{
     text-align: center;
@@ -138,6 +159,8 @@
     height: auto;
     justify-content: center;
     align-items: center;
+    background-color: blue;
+    width: 1000px;
 }
 .contatos h1{
     text-align: center;
@@ -159,16 +182,18 @@
     color: yellow;
     scale: 1.1;
 }
-.info_banner{
+.info_banner {
+    min-width: 100%;
+    min-height: 90vh;
     position: relative;
-    bottom: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .info_banner h1{
-    font-size: 70px;
+    margin-top: 30vh;
+    font-size: 100px;
     color: rgb(0, 0, 0);
     
 }

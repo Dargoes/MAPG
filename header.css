@@ -5,7 +5,7 @@
     font-size: 18px;
     font-family: "Audiowide", sans-serif;;
     transition: all 0.5s;
-
+    
 }
 .logo img{
     height: 70px;
@@ -16,7 +16,6 @@ body{
     display: flex;
     height: 400vh;
     flex-direction: column;
-
 }
 .cabecalho{
     display: flex;
