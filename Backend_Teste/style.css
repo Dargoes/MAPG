@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    border: 2px solid black;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content {
+    border: 2px solid black;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: gainsboro;
+    height: 800px;
+    width: 50%;
+    gap: 300px;
+    padding: 20px;
+}
+
+.formulario {
+    align-self: center;
+}
+
+.content div {
+    margin-bottom: 20px;
+}
+
