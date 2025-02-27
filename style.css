@@ -8,7 +8,6 @@
 }
 
 .banner{
-    flex-direction: column;
     display: flex;
     height: 90vh;
     justify-content:center;
@@ -19,7 +18,7 @@
     filter: grayscale(.7);
 }
 .text_banner{
-    text-align: right;
+    text-align: center;
 }
 
 .banner:hover{
@@ -103,7 +102,9 @@
 }
 .cards_contain{
     display: flex;
+    flex-wrap: wrap;
     gap: 10em;
+    justify-content: center;
 }
 .cards_contain div{
     height: 500px;
@@ -163,7 +164,8 @@
     bottom: 150px;
     display: flex;
     flex-direction: column;
-    text-align: right  ;
+    justify-content: center;
+    align-items: center;
 }
 .info_banner h1{
     font-size: 70px;
