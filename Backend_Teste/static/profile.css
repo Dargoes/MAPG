@@ -5,7 +5,10 @@
     font-size: 18px;
     font-family: "Audiowide", sans-serif;;
     transition: all 0.5s;
-    
+}
+
+body {
+    background-color: gray;
 }
 
 .logo img{
@@ -61,7 +64,7 @@ ul{
 }
 
 .container button {
-    background-color: rgb(51, 48, 48);
+    background-color: rgb(32, 31, 31);
     border-color: black;
     border-radius: 10px;
     padding-top: 20px;
@@ -73,7 +76,7 @@ ul{
     background-color: black;
 }
 
-.container button a {
+.container button {
     color: rgb(226, 196, 95);
     text-decoration: none;
 }
@@ -84,6 +87,7 @@ ul{
     padding: 20px;
     border-radius: 10px;
     width: max-content;
+    box-shadow: -30px 30px 50px 5px black;
 }
 
 .profile_content > ul {

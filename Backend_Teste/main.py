@@ -1,7 +1,7 @@
 from schemas import (Message, UserSchema)
 from models import User
 from database import get_session
-from fastapi import (FastAPI, HTTPException, Depends, Request)
+from fastapi import (FastAPI, HTTPException, Depends, Request, Form)
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -49,11 +49,32 @@ def create_user(request: Request, user: UserSchema = Depends(UserSchema.form), s
         "user": db_user.username,
         "email": "*" * len(db_user.email),
         "password": "*" * len(db_user.password),
-        "create_at": datetime.datetime.now()
+        "create_at": datetime.datetime.now(),
+        "user_id": db_user.id
     })
 
-@app.delete('/delete', response_model=Message)
-def delete_user(user_id: int, session: Session = Depends(get_session)):
+
+@app.post("/login")
+def login(request: Request, email: str = Form(...), password: str = Form(...), session: Session = Depends(get_session)):
+    # Buscar o usuário pelo email
+    db_user = session.scalar(select(User).where((User.password == password) | (User.email == email)))
+    
+    if db_user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    
+    # Se tudo estiver certo, retorne uma resposta de sucesso
+    return templates.TemplateResponse(request=request, name="profile.html", context={
+        "message": 'Dados Recebidos',
+        "user": db_user.username,
+        "email": "*" * len(db_user.email),
+        "password": "*" * len(db_user.password),
+        "create_at": datetime.datetime.now(),
+        "user_id": db_user.id
+    })
+
+
+@app.post('/delete', response_model=Message)
+def delete_user(user_id: int = Form(...), session: Session = Depends(get_session)):
     db_user = session.scalar(
         select(User).where(User.id == user_id)
     )

@@ -16,3 +16,8 @@ class UserSchema(BaseModel):
         cls, username: str = Form(...), email: EmailStr = Form(...), password: str = Form(...)
     ):
         return cls(username=username, email=email, password=password)
+    
+
+class LoginSchema(BaseModel):
+    email: str
+    password: str

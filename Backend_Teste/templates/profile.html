@@ -25,7 +25,10 @@
                 <li>Email: {{email}}</li>
                 <li>Passowrd: {{password}}</li>
                 <li>Ingresso no site: {{create_at.strftime('%d/%m/%Y %H:%M:%S') }}</li>
-                <button><a href="http://127.0.0.1:3000/delete">Exlcuir Conta</a></button>
+                <form action="http://127.0.0.1:8000/delete" method="POST">
+                    <input type="hidden" name="user_id" value="{{ user_id }}">
+                    <button type="submit">Excluir Conta</button>
+                </form>
             </ul>
 
         </div>
