@@ -30,7 +30,7 @@ body {
     top: 10vh;
     height: 90vh;
     min-width: 150px;
-    background-image: url(../imagens/ori1.jpg);
+    background-image: url(../imagens/fear5.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,7 +110,7 @@ body {
     display: inline-block;
     min-width: 30px;
     min-height: 30px;
-    background-image: url(../imagens/ori_logo.jpg);
+    background-image: url(../imagens/fear_logo.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -157,31 +157,19 @@ body {
 }
 
 .galeria1 {
-    background-image: url(../imagens/ori2.jpg);
+    background-image: url(../imagens/fear1.jpg);
 }
 
 .galeria2 {
-    background-image: url(../imagens/ori3.jpg);
+    background-image: url(../imagens/fear2.jpg);
 }
 
 .galeria3 {
-    background-image: url(../imagens/ori4.jpg);
+    background-image: url(../imagens/fear3.jpg);
 }
 
 .galeria4 {
-    background-image: url(../imagens/ori5.jpg);
-}
-
-.galeria5 {
-    background-image: url(../imagens/ori6.jpg);
-}
-
-.galeria6 {
-    background-image: url(../imagens/ori7.jpg);
-}
-
-.galeria7 {
-    background-image: url(../imagens/ori8.jpg);
+    background-image: url(../imagens/fear4.jpg);
 }
 
 .subtitle {

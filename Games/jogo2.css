@@ -30,7 +30,7 @@ body {
     top: 10vh;
     height: 90vh;
     min-width: 150px;
-    background-image: url(../imagens/ori1.jpg);
+    background-image: url(../imagens/brawl12.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -110,7 +110,7 @@ body {
     display: inline-block;
     min-width: 30px;
     min-height: 30px;
-    background-image: url(../imagens/ori_logo.jpg);
+    background-image: url(../imagens/brawl_logo.jpg);
     background-size: cover;
     background-position: center;
     border-radius: 5px;
@@ -157,31 +157,48 @@ body {
 }
 
 .galeria1 {
-    background-image: url(../imagens/ori2.jpg);
+    background-image: url(../imagens/brawl1.jpg);
 }
 
 .galeria2 {
-    background-image: url(../imagens/ori3.jpg);
+    background-image: url(../imagens/brawl2.jpg);
 }
 
 .galeria3 {
-    background-image: url(../imagens/ori4.jpg);
+    background-image: url(../imagens/brawl3.jpg);
 }
 
 .galeria4 {
-    background-image: url(../imagens/ori5.jpg);
+    background-image: url(../imagens/brawl4.jpg);
 }
 
 .galeria5 {
-    background-image: url(../imagens/ori6.jpg);
+    background-image: url(../imagens/brawl5.jpg);
 }
 
 .galeria6 {
-    background-image: url(../imagens/ori7.jpg);
+    background-image: url(../imagens/brawl6.jpg);
 }
 
 .galeria7 {
-    background-image: url(../imagens/ori8.jpg);
+    background-image: url(../imagens/brawl7.jpg);
+}
+
+.galeria8 {
+    background-image: url(../imagens/brawl8.jpg);
+    margin-left: 5px;
+}
+
+.galeria9 {
+    background-image: url(../imagens/brawl9.jpg);
+}
+
+.galeria10 {
+    background-image: url(../imagens/brawl10.jpg);
+}
+
+.galeria11 {
+    background-image: url(../imagens/brawl11.jpg);
 }
 
 .subtitle {
