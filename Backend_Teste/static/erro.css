@@ -1,0 +1,31 @@
+* {
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+h1 {
+    border-bottom: 1px solid black;
+}
+
+.content a{
+    text-align: center;
+    text-decoration: none;
+    padding: 20px 40px 20px 40px;
+    border-radius: 10px;
+    background-color: rgb(32, 31, 31);
+    color: rgb(226, 196, 95);
+}

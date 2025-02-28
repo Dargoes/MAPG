@@ -1,7 +1,7 @@
 from schemas import (Message, UserSchema)
 from models import User
 from database import get_session
-from fastapi import (FastAPI, HTTPException, Depends, Request, Form)
+from fastapi import (FastAPI, Depends, Request, Form)
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
@@ -27,16 +27,23 @@ def read_root():
 
 @app.post('/registro', status_code=201, response_class=HTMLResponse)
 def create_user(request: Request, user: UserSchema = Depends(UserSchema.form), session: Session = Depends(get_session)):
-
     db_user = session.scalar(
         select(User).where((User.username == user.username) | (User.email == user.email))
     )
 
     if db_user:
         if db_user.username == user.username:
-            raise HTTPException(status_code=400, detail='Username already exists')
+            return templates.TemplateResponse(request=request, name="registro_erro.html", context={
+        "message": 'Dados Recebidos',
+        "code": '400 Bad Request',
+        "result": 'Esse usuário já existe'
+    })
         elif db_user.email == user.email:
-            raise HTTPException(status_code=400, detail='Email already exists')
+            return templates.TemplateResponse(request=request, name="registro_erro.html", context={
+        "message": 'Dados Recebidos',
+        "code": '400 Bad Request',
+        "result": 'Esse email já existe'
+    })
         
     db_user = User(username=user.username, email=user.email, password=user.password)
 
@@ -56,11 +63,14 @@ def create_user(request: Request, user: UserSchema = Depends(UserSchema.form), s
 
 @app.post("/login")
 def login(request: Request, email: str = Form(...), password: str = Form(...), session: Session = Depends(get_session)):
-    # Buscar o usuário pelo email
     db_user = session.scalar(select(User).where((User.password == password) | (User.email == email)))
     
     if db_user is None:
-        raise HTTPException(status_code=404, detail="User not found")
+        return templates.TemplateResponse(request=request, name="login_erro.html", context={
+        "message": 'Dados Recebidos',
+        "code": '404 Not Found',
+        "result": 'O usuário não foi encontrado'
+    })
     
     # Se tudo estiver certo, retorne uma resposta de sucesso
     return templates.TemplateResponse(request=request, name="profile.html", context={
@@ -74,18 +84,26 @@ def login(request: Request, email: str = Form(...), password: str = Form(...), s
 
 
 @app.post('/delete', response_model=Message)
-def delete_user(user_id: int = Form(...), session: Session = Depends(get_session)):
+def delete_user(request: Request, user_id: int = Form(...), session: Session = Depends(get_session)):
     db_user = session.scalar(
         select(User).where(User.id == user_id)
     )
 
     if not db_user:
-        raise HTTPException(status_code=404, detail='User not found')
+        return templates.TemplateResponse(request=request, name="delete_erro.html", context={
+        "message": 'Dados Recebidos',
+        "code": '404 Not Found',
+        "result": 'O usuário não foi encontrado'
+    })
     
     session.delete(db_user)
     session.commit()
 
-    return {'message': 'User deleted successfully'}
+    return templates.TemplateResponse(request=request, name="registro_erro.html", context={
+        "message": 'Dados Recebidos',
+        "code": '200 OK',
+        "result": 'Usuário deletado com sucesso'
+    })
 
 if __name__ == "__main__":
     uvicorn.run(app, host="127.0.0.1", port=8000)
