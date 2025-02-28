@@ -7,16 +7,19 @@
     transition: all 0.5s;
     
 }
+
 .logo img{
     height: 70px;
     width: 70px;
     margin-left: 2.5em;
 }
+
 body{
     display: flex;
-    height: 400vh;
+    height: 100vh;
     flex-direction: column;
 }
+
 .cabecalho{
     display: flex;
     height: 10vh;
@@ -31,17 +34,64 @@ ul{
     gap: 2.5em;
     margin-right: 2.5em;
 }
+
 .header_list{
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.5s;
 }
+
 .header_list a{
     color: white;
     text-decoration: none;
 }
+
 .header_list a:hover, .header_list:hover{
     transform: scale(1.08);
     text-decoration: underline;
+}
+
+.container {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container button {
+    background-color: rgb(51, 48, 48);
+    border-color: black;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 200px;
+}
+
+.container button:hover {
+    background-color: black;
+}
+
+.container button a {
+    color: rgb(226, 196, 95);
+    text-decoration: none;
+}
+
+
+.profile_content {
+    background-color: rgb(226, 196, 95);
+    padding: 20px;
+    border-radius: 10px;
+    width: max-content;
+}
+
+.profile_content > ul {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+hr {
+    border-color: black;
 }

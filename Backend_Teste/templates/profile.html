@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/profile.css">
+    <title>Sua Conta</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <a class="logo" href="../../index.html"><img src="{{url_for('static', path='logo.png')}}" alt=""></a>
+        <div class="content_header">
+            <ul>
+                <li class="header_list"><a href="../../Login/login_page.html">Home</a></li>
+                <li class="header_list"><a href="">Contatos</a></li>
+                <li class="header_list"><a href="">Sobre</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="container">
+        <div class="profile_content">
+            <h1>Minha conta</h1><hr>
+            <ul>
+                <li>Nome: {{user}}</li>
+                <li>Email: {{email}}</li>
+                <li>Passowrd: {{password}}</li>
+                <li>Ingresso no site: {{create_at.strftime('%d/%m/%Y %H:%M:%S') }}</li>
+                <button><a href="http://127.0.0.1:3000/delete">Exlcuir Conta</a></button>
+            </ul>
+
+        </div>
+    </div>
+</body>
+</html>
