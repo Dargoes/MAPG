@@ -38,6 +38,10 @@ ul{
     margin-right: 2.5em;
 }
 
+li {
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+
 .header_list{
     display: flex;
     justify-content: center;
