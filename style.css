@@ -1,6 +1,7 @@
 
 .content{
     display: flex;
+    flex-grow: 1;
     background-color: gray;
     flex-direction: column;
     flex-grow: 1;
@@ -19,18 +20,36 @@
     height: 90vh;
     filter: grayscale(.7);
 }
-#ori_button{
-    z-index: 99;
-    position: relative;
-    bottom: 150px;
+.button_banner{
+    z-index: 1;
 }
 #ori{
     background-image: url(imagens/ori.jpg);
     background-size: cover;
     background-clip: content-box;
 }
+#brawl{
+    background-image: url(imagens/brawl_banner.jpg);
+    background-size: cover;
+    background-clip: content-box;
+}
+#fear{
+    background-image: url(imagens/fear_banner.jpg);
+    background-size: cover;
+    background-clip: content-box;
+}
 .text_banner{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
     text-align: center;
+    position: relative;
+    bottom: 30vh;
+    background-color: rgba(121, 122, 119, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    
 }
 
 .banner:hover{
@@ -38,7 +57,7 @@
 }
 .banner a button{
     position: relative;
-    top: 10em;
+    top: 10vh;
     font-size: 30px;
     color: rgb(0, 0, 0);
     text-decoration: none;
@@ -56,7 +75,6 @@
 .text_area{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .next_prev button{
@@ -130,26 +148,104 @@
 .cards_contain div{
     height: 500px;
     width: 400px;
-    background-color: aqua;
     border-radius: 40px;
+}
+.card_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+    padding-inline: 10px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0);
+    transition: all 0.1s;
 }
 #card1{
     background-image: url(imagens/braw.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition: all 0.1s;
 }
+#card1:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card1:hover .jogos_text{
+    z-index: 2;
+}
+#card1:hover .jogos_button{
+    z-index: 2;
+    background-color: black;
+    color: white;
+}
+#card1:hover .jogos_button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+.jogos_text{
+    z-index: -1;
+}
+.jogos_button{
+    z-index: -1;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0,0);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0);
+}
+
 #card2{
     background-image: url(imagens/ori_card.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
+#card2:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card2:hover .jogos_text{
+    z-index: 2;
+}
+#card2:hover .jogos_button{
+    z-index: 2;
+    background-color: black;
+    color: white;
+}
+#card2:hover .jogos_button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
 #card3{
     background-image: url(imagens/fear.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+}
+#card3:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card3:hover .jogos_text{
+    z-index: 2;
+}
+#card3:hover .jogos_button{
+    z-index: 2;
+    background-color: black;
+    color: white;
+}
+#card3:hover .jogos_button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
 }
 
 .contatos{
@@ -185,15 +281,13 @@
 .info_banner {
     min-width: 100%;
     min-height: 90vh;
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .info_banner h1{
-    margin-top: 30vh;
-    font-size: 100px;
+    font-size: 60px;
     color: rgb(0, 0, 0);
     
 }
