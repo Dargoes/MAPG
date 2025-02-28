@@ -1,16 +1,29 @@
-from fastapi import Form
 from pydantic import BaseModel, EmailStr
+from fastapi import Form
+
+
+class Message(BaseModel):
+    message: str
+
 
 class UserSchema(BaseModel):
-    user: str
+    username: str
     email: EmailStr
     password: str
 
-class PublicSchema(BaseModel):
-    id: int
-    user: str
-    email: EmailStr
+    @classmethod
+    def form(
+        cls, username: str = Form(...), email: EmailStr = Form(...), password: str = Form(...)
+    ):
+        return cls(username=username, email=email, password=password)
 
-def convert_form_public(user:str = Form(), email:EmailStr = Form()) -> PublicSchema:
-    client = PublicSchema(user=user, email=email)
-    return client
+
+class UserPublic(BaseModel):
+    id: int
+    username: str
+    email: EmailStr
+    password: str
+
+
+class UserList(BaseModel):
+    users: list[UserPublic]
