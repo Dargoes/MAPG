@@ -1,6 +1,6 @@
-from schemas import (Message, UserSchema)
-from models import User
-from database import get_session
+from fastapi_config.schemas import (Message, UserSchema)
+from fastapi_config.models import User
+from fastapi_config.database import get_session
 from fastapi import (FastAPI, Depends, Request, Form)
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates

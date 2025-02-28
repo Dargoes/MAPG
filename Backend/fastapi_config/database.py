@@ -1,6 +1,6 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
-from settings import Settings
+from fastapi_config.settings import Settings
 
 
 engine = create_engine(Settings().DATABASE_URL, connect_args={"check_same_thread": False})
