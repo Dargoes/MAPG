@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+<body>
+    <!-- mapg = Mastering Adventure and Progress in Games -->
+    <!-- header -->
+    <header class="cabecalho">
+        <a class="logo" href="../home/home_page.html"><img src="../imagens/logo.png" alt=""></a>
+        <div class="content_header">
+            <ul>
+                <li class="header_list"><a href="../home/home_page.html">Home</a></li>
+                <li class="header_list"><a href="../Contatos/contatos.html">Contatos</a></li>
+                <li class="header_list"><a href="../Sobre/sobre.html">Sobre</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="content">
+        <div class="banner">
+            
+            <div class="carousel" id="carousel">
+                <div class="info_banner" id="ori">
+                    <div class="text_banner">
+                        <h1>Ori and The Will of The Wisps</h1>
+                        <h2>Moon Studios</h2>
+                    </div>
+                    <a href="../Games/jogo1.html" class="button_banner"><button>SOBRE</button></a>
+                </div>
+                <div class="info_banner" id="brawl">
+                    <div class="text_banner">
+                        <h1>Brawl Star</h1>
+                        <h2>Supercell</h2>
+                    </div>
+                    <a href="../Games/jogo2.html" class="button_banner"><button>SOBRE</button></a>
+                </div>
+                <div class="info_banner" id="fear">
+                    <div class="text_banner">
+                        <h1>Fear and Hunger</h1>
+                        <h2>Miro Haverinen</h2>
+                    </div>
+                    <a href="../Games/jogo3.html" class="button_banner"><button>SOBRE</button></a>
+                </div>
+            </div>
+            <div class="next_prev">
+                <button id="prev" onclick="moveSlide(-1)"><</button>
+                <button id="next" onclick="moveSlide(1)">></button>
+            </div>
+        </div>
+        <div class="text_area">
+            <div class="sobre">
+                <h1>MAPG</h1>
+                <p>O MAPG é um blog focado em trazer conteúdos detalhados sobre jogos como Fear and Hunger, Ori e Brawl Stars. Nele, os leitores encontram uma variedade de informações, incluindo análises, guias estratégicos e curiosidades sobre esses títulos.Para os fãs de Fear and Hunger, o blog explora a atmosfera sombria, os desafios e as mecânicas únicas do jogo. Já para os admiradores de Ori, há conteúdos sobre a emocionante narrativa, os cenários deslumbrantes e as mecânicas de plataforma. No caso de Brawl Stars, o site acompanha atualizações, dicas de jogabilidade e estratégias para os diferentes modos e personagens.</p>
+                <a href=""><button>SAIBA MAIS</button></a>
+            </div>
+        </div>
+        <div class="jogos">
+            <h1>Jogos</h1>
+            <div class="cards_contain">
+                <div id="card1">
+                    <div class="card_text">
+                        <p class="jogos_text">Brawl Stars é um jogo multiplayer de ação da Supercell, onde os jogadores competem em diferentes modos com personagens únicos, chamados Brawlers. Com partidas rápidas, jogabilidade estratégica e eventos variados, o game é dinâmico e viciante.</p>
+                        <a href="../Games/jogo1.html" class="jogos_button"><button>SOBRE</button></a>
+                    </div>
+                </div>
+                <div id="card2">
+                    <div class="card_text">
+                        <p class="jogos_text">Ori é uma série de jogos de plataforma e metroidvania conhecida por sua arte deslumbrante, trilha sonora emocionante e narrativa tocante. Os jogadores controlam Ori, um espírito guardião, em jornadas de exploração, desafio e superação.</p>
+                        <a href="../Games/jogo2.html" class="jogos_button"><button>SOBRE</button></a>
+                    </div>
+                </div>
+                <div id="card3">
+                    <div class="card_text">
+                        <p class="jogos_text">Fear and Hunger 2: Termina é a sequência do RPG de terror sombrio, ambientado em uma cidade decadente nos anos 1940. O jogo mantém a dificuldade brutal, explorando temas de desespero, sobrevivência e escolhas impactantes.</p>
+                        <a href="../Games/jogo3.html" class="jogos_button"><button>SOBRE</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text_area">
+            <div class="contatos">
+                <h1>Contato</h1>
+                <p>No MAPG, cada artigo é escrito com paixão e dedicação por autores que vivem e respiram games. Nosso time se esforça para trazer análises detalhadas, curiosidades, notícias e conteúdos exclusivos para quem ama o universo gamer. Aqui, não apenas jogamos, mas exploramos cada detalhe, história e mecânica para oferecer a melhor experiência aos leitores. Nosso compromisso é entregar informação de qualidade, sempre com um olhar crítico e autêntico. Valorizamos a criatividade e o empenho de cada autor, que transforma palavras em verdadeiras jornadas pelo mundo dos jogos. Seja um clássico nostálgico ou um lançamento aguardado, nossa missão é trazer conteúdos que informam e inspiram. No MAPG, cada matéria é um convite para mergulhar mais fundo no universo dos games. Acompanhe nosso trabalho e jogue junto com a gente!</p>
+                <a href=""><button>SAIBA MAIS</button></a>
+            </div>
+        </div>
+    </div>
+    <script>
+        let index = 0;
+        function moveSlide(step) {
+            const carousel = document.getElementById('carousel');
+            const items = document.querySelectorAll('.info_banner');
+            index = (index + step + items.length) % items.length;
+            carousel.style.transform = `translateX(${-index * 100}%)`;
+        }
+    </script>
+
+</body>
+</html>

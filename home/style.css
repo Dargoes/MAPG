@@ -1,0 +1,512 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Audiowide", sans-serif;;
+    transition: all 0.5s;
+}
+.logo img{
+    z-index: 11;
+    height: 70px;
+    width: 70px;
+    margin-left: 2.5em;
+}
+body{
+    height: 100vh;
+}
+.cabecalho{
+    display: flex;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+    margin-right: 2.5em;
+}
+.header_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.header_list a{
+    z-index: 10;
+    color: white;
+    text-decoration: none;
+}
+.header_list a:hover, .header_list:hover{
+    transform: scale(1.08);
+    text-decoration: underline;
+}
+
+
+.content{
+    display: flex;
+    background-color: gray;
+    flex-direction: column;
+    gap: 10vh;
+    height: fit-content;
+}
+
+
+.carousel{
+   display: flex;
+   transition: all 0.5 ease-in-out; 
+}
+.banner{
+    width: 100%;
+    overflow: hidden;
+    height: 90vh;
+    filter: grayscale(.7);
+    z-index: 99;
+}
+.button_banner{
+    z-index: 1;
+}
+#ori{
+    background-image: url(../imagens/ori.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+#brawl{
+    background-image: url(../imagens/brawl_banner.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+#fear{
+    background-image: url(../imagens/fear_banner.jpg);
+    background-size: cover;
+    background-clip: content-box;
+    background-position: center;
+}
+.text_banner{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    bottom: 30vh;
+    background-color: rgba(121, 122, 119, 0);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    
+}
+
+.banner:hover{
+    filter: grayscale(0);
+}
+.banner a button{
+    position: relative;
+    top: 20vh;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: white;
+}
+.banner a button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+.text_area{
+    display: flex;
+    justify-content: center;
+}
+
+.next_prev button{
+    
+    background: transparent;
+    border: none;
+    font-size: 100px;
+    color: white;
+    text-decoration: none;
+}
+#next{
+    position:absolute;
+    top: 40vh;
+    right: 0;
+}
+#prev{
+    top: 40vh;
+    position:absolute;
+    left: 0px;
+}
+.next_prev button:hover{
+    color: rgb(219, 219, 124) ;
+}
+.sobre{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.sobre h1{
+    text-align: center;
+    font-size: 100px;
+}
+.sobre p {
+    margin-inline: 100px;
+    text-align: justify;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.sobre button{
+    border-radius: 120px;
+    border: none;
+    width: 150px;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.sobre button:hover{
+    background-color: black;
+    color: yellow;
+    scale: 1.1;
+}
+.jogos{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.jogos h1{
+    text-align: center;
+    font-size: 100px;
+}
+.cards_contain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10em;
+    justify-content: center;
+}
+.cards_contain div{
+    height: 500px;
+    width: 400px;
+    border-radius: 40px;
+}
+.card_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+    padding-inline: 10px;
+    text-align: justify;
+    color: rgba(0, 0, 0, 0);
+    transition: all 0.1s;
+}
+#card1{
+    background-image: url(../imagens/braw.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all 0.1s;
+}
+#card1:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card1:hover .jogos_text{
+    z-index: 2;
+    
+}
+#card1 a button{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: white;
+}
+#card1 a button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+#card1:hover a{
+    scale: 1.05;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.jogos_text{
+    z-index: -1;
+}
+#card1 a {
+    z-index: -1;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0,0);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0);
+}
+#card2 a {
+    z-index: -1;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0,0);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0);
+}
+
+#card2{
+    background-image: url(../imagens/ori_card.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#card2:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card2:hover .jogos_text{
+    z-index: 2;
+    
+}
+#card2 a button{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: white;
+}
+#card2 a button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+#card2:hover a{
+    scale: 1.05;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#card3 a {
+    z-index: -1;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0,0);
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: rgba(255, 255, 255, 0);
+}
+#card3{
+    background-image: url(../imagens/fear.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#card3:hover .card_text{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    color: rgb(255, 255, 255);
+}
+#card3:hover .jogos_text{
+    z-index: 2;
+    
+}
+#card3 a button{
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background-color: black;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    color: white;
+}
+#card3 a button:hover{
+    scale: 1.05;
+    background-color: white;
+    color: black;
+}
+#card3:hover a{
+    scale: 1.05;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.contatos{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+}
+.contatos h1{
+    text-align: center;
+    font-size: 100px;
+}
+.contatos p {
+    margin-inline: 100px;
+    text-align: justify;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.contatos button{
+    border-radius: 120px;
+    border: none;
+    width: 150px;
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.contatos button:hover{
+    background-color: black;
+    color: yellow;
+    scale: 1.1;
+}
+.info_banner {
+    min-width: 100%;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info_banner h1{
+    font-size: 60px;
+    color: rgb(0, 0, 0);
+    
+}
+.info_banner h2{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+
+
+@media screen and (max-width: 750px) {
+    .cabecalho {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        align-items: center;
+        z-index: 4;
+        height: fit-content;
+    }
+
+    .container {
+        margin-top: 0;
+    }
+    .banner{
+        height: 50vh;
+    }
+    .text_banner h1{
+        font-size: 20px ;
+    }
+    .text_banner h2{
+        font-size: 15px;
+    }
+    .sobre h1, .contatos h1, .jogos h1{
+        font-size: 20px;
+    }
+    .sobre p, .contatos p{
+        font-size: 11px;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards_contain div{
+        height: 30vh;
+        width: 200px;
+        border-radius: 40px;
+    }
+    .card_text, p{
+        font-size: 10px;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 0;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2.5em;
+        margin-right: 0;
+    }
+    #next{
+        position:absolute;
+        top: 20vh;
+        right: 15px;
+    }
+    #prev{
+        top: 20vh;
+        position:absolute;
+        left: 15px;
+    }
+    #ori{
+        background-image: url(../imagens/ori.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: -100px -60px;
+    }
+    #brawl{
+        background-image: url(../imagens/brawl_banner.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: -300px -100px;
+    }
+    #fear{
+        background-image: url(../imagens/fear_banner.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: center;
+    }
+    .banner a{
+        position: relative;
+        z-index: 99;
+        bottom: 15vh;
+    }
+    .text_banner{
+        border-radius: 10px;
+    }
+    .next_prev button{
+    
+        background: transparent;
+        border: none;
+        font-size: 50px;
+        color: white;
+        text-decoration: none;
+    }
+    .banner a button{
+        top: 10vh;
+    }
+    .contatos p {
+        margin-inline: 10px;
+        text-align: justify;
+        font-family: "Atkinson Hyperlegible Mono", serif;
+    }
+    .sobre p {
+        margin-inline: 10px;
+        text-align: justify;
+        font-family: "Atkinson Hyperlegible Mono", serif;
+    }
+
+
+}

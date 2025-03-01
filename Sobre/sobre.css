@@ -1,0 +1,195 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Audiowide", sans-serif;;
+    transition: all 0.5s;
+}
+.logo img{
+    height: 70px;
+    width: 70px;
+    margin-left: 2.5em;
+}
+body{
+    height: 100vh;
+}
+.cabecalho{
+    display: flex;
+    height: 10vh;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+    margin-right: 2.5em;
+}
+.header_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.header_list a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.header_list a:hover, .header_list:hover{
+    transform: scale(1.08);
+    text-decoration: underline;
+}
+
+.content{
+    display: flex;
+    background-color: gray;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10vh;
+    height: fit-content;
+}
+.quem_somos{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
+}
+.quem_somos h1{
+    font-size: 90px;
+}
+.quem_somos p{
+    font-family: "Atkinson Hyperlegible Mono", serif;
+}
+.autores{
+    gap: 50px;
+    flex-direction: column;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.autores h1{
+    text-align: center;
+    font-size: 100px;
+}
+.cards_contain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10em;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.cards_contain div{
+    height: 500px;
+    width: 400px;
+    border-radius: 40px;
+}
+.card_text{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    gap: 3em;
+    padding-inline: 10px;
+    text-align: justify;
+    color: rgba(0, 0, 0);
+    transition: all 0.1s;
+}
+.card_text p{
+    margin-bottom: 1em;
+    font-size: 40px;
+    background-color: rgba(167, 164, 164, 0.39);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+}
+#card1{
+    background-image: url(../imagens/pedro_sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px 0px;
+}
+#card2{
+    background-image: url(../imagens/arthur_sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#card3{
+    background-image: url(../imagens/miguel_sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+#card4{
+    background-image: url(../imagens/guilherme_sobre.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width: 750px) {
+    .cabecalho {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: column;
+        align-items: center;
+        z-index: 4;
+        height: fit-content;
+    }
+    .card_text p{
+        margin-bottom: 1em;
+        font-size: 13px;
+        background-color: rgba(167, 164, 164, 0.39);
+        backdrop-filter: blur(10px);
+        border-radius: 30px;
+    }
+    .autores h1{
+        text-align: center;
+        font-size: 20px;
+    }
+    .quem_somos h1{
+        text-align: center;
+        font-size: 20px;
+    }
+    .quem_somos p{
+        text-align: justify;
+        margin-inline: 10px;
+        font-size: 13px;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards_contain div{
+        height: 30vh;
+        width: 200px;
+        border-radius: 40px;
+    }
+    .card_text, p{
+        font-size: 10px;
+    }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 0;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2.5em;
+        margin-right: 0;
+    }
+    
+}
