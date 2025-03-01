@@ -8,21 +8,20 @@ from fastapi.staticfiles import StaticFiles
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 import uvicorn 
-import datetime
 import os 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 html_path = os.path.join(BASE_DIR, "templates")
 templates = Jinja2Templates(directory=html_path)
-
 css_path = os.path.join(BASE_DIR, 'static')
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory=css_path), name="static")
 
+
 @app.get('/', response_model=Message)
 def read_root():
-    return {'message': 'Aplicação Rodando!'}
+    return Message(message='Aplicação Rodando!')
 
 
 @app.post('/registro', status_code=201, response_class=HTMLResponse)
@@ -56,14 +55,14 @@ def create_user(request: Request, user: UserSchema = Depends(UserSchema.form), s
         "user": db_user.username,
         "email": "*" * len(db_user.email),
         "password": "*" * len(db_user.password),
-        "create_at": datetime.datetime.now(),
+        "create_at": db_user.created_at,
         "user_id": db_user.id
     })
 
 
 @app.post("/login")
 def login(request: Request, email: str = Form(...), password: str = Form(...), session: Session = Depends(get_session)):
-    db_user = session.scalar(select(User).where((User.password == password) | (User.email == email)))
+    db_user = session.scalar(select(User).where((User.email == email) & (User.password == password)))
     
     if db_user is None:
         return templates.TemplateResponse(request=request, name="login_erro.html", context={
@@ -78,7 +77,7 @@ def login(request: Request, email: str = Form(...), password: str = Form(...), s
         "user": db_user.username,
         "email": "*" * len(db_user.email),
         "password": "*" * len(db_user.password),
-        "create_at": datetime.datetime.now(),
+        "create_at": db_user.created_at,
         "user_id": db_user.id
     })
 
