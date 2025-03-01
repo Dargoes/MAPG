@@ -65,7 +65,7 @@ def login(request: Request, email: str = Form(...), password: str = Form(...), s
     db_user = session.scalar(select(User).where((User.email == email) & (User.password == password)))
     
     if db_user is None:
-        return templates.TemplateResponse(request=request, name="login_erro.html", context={
+        return templates.TemplateResponse(request=request, name="registro_erro.html", context={
         "message": 'Dados Recebidos',
         "code": '404 Not Found',
         "result": 'O usuário não foi encontrado'
@@ -89,7 +89,7 @@ def delete_user(request: Request, user_id: int = Form(...), session: Session = D
     )
 
     if not db_user:
-        return templates.TemplateResponse(request=request, name="delete_erro.html", context={
+        return templates.TemplateResponse(request=request, name="registro_erro.html", context={
         "message": 'Dados Recebidos',
         "code": '404 Not Found',
         "result": 'O usuário não foi encontrado'

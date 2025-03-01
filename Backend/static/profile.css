@@ -5,6 +5,7 @@
     font-size: 18px;
     font-family: "Audiowide", sans-serif;;
     transition: all 0.5s;
+    gap: 20px;
 }
 
 body {
@@ -90,6 +91,7 @@ li {
     background-color: rgb(226, 196, 95);
     padding: 20px;
     border-radius: 10px;
+    max-width: 400px;
     width: max-content;
     box-shadow: -30px 30px 50px 5px black;
 }
@@ -102,4 +104,46 @@ li {
 
 hr {
     border-color: black;
+}
+
+@media screen and (max-width: 450px){
+    .profile_content {
+        max-width: 300px;
+        border-radius: 20px;
+        overflow-wrap: break-word;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 1em;
+        margin-right: 1em;
+    }
+    
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 1em;
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1024px){
+    .profile_content {
+        max-width: 300px;
+        border-radius: 20px;
+        overflow-wrap: break-word;
+    }
+    
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 1em;
+        margin-right: 1em;
+    }
+    
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 1em;
+    }
 }
