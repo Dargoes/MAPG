@@ -1,16 +1,16 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 body {
-    background-color: black;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
 }
 
 .content {
     width: 100%;
-    height: 100%;
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
@@ -21,7 +21,7 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 165px;
+    height: 20%;
     background-image: url(../imagens/WhatsApp\ Image\ 2025-02-28\ at\ 09.52.01.jpeg);
     background-color: rgb(0, 0, 0);
     background-repeat: no-repeat;
@@ -46,13 +46,13 @@ body {
 }
 
 .redes_sociais {
-    margin-left: 2.5em;
+    padding-left: 2.5em;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: flex;
     gap: 30px;
-    background-color: rgb(0, 0, 0);
     flex-wrap: wrap;
+    background-color: rgb(0, 0, 0);
 }
 
 .card {
@@ -104,7 +104,7 @@ body {
 }
 
 .fale_conosco  {
-    margin-left: 2.5em;
+    padding: 2.5em;
     width: 100%;
     height: 100vh;
     display: flex;
@@ -117,4 +117,20 @@ body {
 .phone_logo:hover {content: url(../imagens/Phone2.png); transform: scale(1.08);}
 .phone_logo, .bard_logo {
     transition: all 0.5s
+}
+
+@media (max-width: 750px) {
+    .titulo {
+        background-size: 50px;
+        height: 120px;
+    }
+    
+    .card {
+        width: 300px;
+        height: 300px;
+    }
+
+    .fale_conosco {
+        height: 140vh;
+    }
 }
