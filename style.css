@@ -1,3 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: "Audiowide", sans-serif;;
+    transition: all 0.5s;
+}
 .logo img{
     height: 70px;
     width: 70px;
@@ -5,12 +13,12 @@
 }
 body{
     display: flex;
-    height: 400vh;
+    height: fit-content;
     flex-direction: column;
 }
 .cabecalho{
     display: flex;
-    height: 10vh;
+    height: fit-content;
     background-color: rgb(0, 0, 0);
     align-items: center;
     justify-content: space-between;
@@ -44,6 +52,8 @@ ul{
     flex-direction: column;
     flex-grow: 1;
     gap: 10vh;
+    height: fit-content;
+    
 }
 
 
@@ -65,16 +75,19 @@ ul{
     background-image: url(imagens/ori.jpg);
     background-size: cover;
     background-clip: content-box;
+    background-position: center;
 }
 #brawl{
     background-image: url(imagens/brawl_banner.jpg);
     background-size: cover;
     background-clip: content-box;
+    background-position: center;
 }
 #fear{
     background-image: url(imagens/fear_banner.jpg);
     background-size: cover;
     background-clip: content-box;
+    background-position: center;
 }
 .text_banner{
     display: flex;
@@ -134,7 +147,7 @@ ul{
     left: 0px;
 }
 .next_prev button:hover{
-    color: yellow ;
+    color: rgb(219, 219, 124) ;
 }
 .sobre{
     gap: 50px;
@@ -142,7 +155,6 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: blue;
     width: 1000px;
 }
 .sobre h1{
@@ -293,7 +305,6 @@ ul{
     height: auto;
     justify-content: center;
     align-items: center;
-    background-color: blue;
     width: 1000px;
 }
 .contatos h1{
@@ -337,14 +348,13 @@ ul{
 
 @media screen and (max-width: 750px) {
     .cabecalho {
-        height: fit-content;
         width: 100%;
         display: flex;
         flex-wrap: wrap;
         flex-flow: column;
-        justify-content: center;
         align-items: center;
         z-index: 4;
+        height: fit-content;
     }
 
     .container {
@@ -354,13 +364,13 @@ ul{
         height: 50vh;
     }
     .text_banner h1{
-        font-size: 30px ;
+        font-size: 20px ;
     }
     .text_banner h2{
-        font-size: 20px;
+        font-size: 15px;
     }
     .sobre h1, .contatos h1, .jogos h1{
-        font-size: 30px;
+        font-size: 20px;
     }
     .sobre p, .contatos p{
         font-size: 11px;
@@ -380,5 +390,61 @@ ul{
     .card_text, p{
         font-size: 10px;
     }
+    .logo img{
+        height: 70px;
+        width: 70px;
+        margin-left: 0;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 2.5em;
+        margin-right: 0;
+    }
+    #next{
+        position:absolute;
+        top: 20vh;
+        right: 15px;
+    }
+    #prev{
+        top: 20vh;
+        position:absolute;
+        left: 15px;
+    }
+    #ori{
+        background-image: url(imagens/ori.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: -100px -60px;
+    }
+    #brawl{
+        background-image: url(imagens/brawl_banner.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: -300px -100px;
+    }
+    #fear{
+        background-image: url(imagens/fear_banner.jpg);
+        background-size: cover;
+        background-clip: content-box;
+        background-position: center;
+    }
+    .banner a{
+        position: relative;
+        z-index: 99;
+        bottom: 15vh;
+    }
+    .text_banner{
+        border-radius: 10px;
+    }
+    .next_prev button{
+    
+        background: transparent;
+        border: none;
+        font-size: 50px;
+        color: white;
+        text-decoration: none;
+    }
+
 
 }
